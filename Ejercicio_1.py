@@ -1,8 +1,8 @@
 """
-Se realiza una calculadora con operaciones básicas : suma, resta y multiplicación
+Se realiza una calculadora con operaciones básicas : suma, resta, multiplicación y además se le agrega la división,
 haciendo uso del ciclo while para repetir la acción al igual haciendo uso de funciones.
 
-Realizado por Airverson Ventura 31/05/2025
+Realizado por Airverson Ventura 13/08/2025
 
 """
 
@@ -40,13 +40,24 @@ def MULTIPLICACIÓN(): #Definimos multiplicación
     print(f"\nRESULTADO: {num1} * {num2} = {resultado}") #Desplegar en pantalla el resultado es igual a num1 * num2
     input("Presione Enter para continuar...") #Desplegamos presionar enter para seguir en el programa
 
+def DIVISIÓN(): #Definimos división
+    print("DIVISIÓN") #Desplegar en pantalla división
+ 
+    num1, num2 = DATOS() #Llamamos a la función DATOS
+    resultado = num1 / num2 #El resultado es igual al primer número por el segundo número
+ 
+    print(f"\nRESULTADO: {num1} / {num2} = {resultado}") #Desplegar en pantalla el resultado es igual a num1 * num2
+    input("Presione Enter para continuar...") #Desplegamos presionar enter para seguir en el programa
+
+
 
 while True: #Ciclo while para repetir acciones
     print("Seleccione una opcion") #Seleccione una opción
     print("1. SUMA") #Opción 1 suma
     print("2. RESTA") #Opción 2 resta
     print("3. MULTIPLICACIÓN") #Opción 3 multiplicación
-    print("4. Salir") #Opción 5 para salir del programa
+    print("4. DIVISIÓN") #Opción 4 división
+    print("5. Salir") #Opción 5 para salir del programa
     opcion = input("Ingrese el numero de la opcion deseada: ") #Ingresa opción deseada
  
     if opcion == '1': #opcion 1 para sumar
@@ -58,7 +69,10 @@ while True: #Ciclo while para repetir acciones
     elif opcion == '3': #opcion 3 para multiplicar
         MULTIPLICACIÓN() #Se llama a MULTIPLICACIÓN para multiplicar
 
-    elif opcion == '4': #opcion 5 para salir del programa
+    elif opcion == '4': #opcion 4 para dividir
+        DIVISIÓN() #Se llama a DIVISIÓN para dividir
+
+    elif opcion == '5': #opcion 5 para salir del programa
         print("\nSaliendo del sistema... ¡Hasta luego!") #Deplegamos para salir del programa
         break #Descanso
     else: #Si no
